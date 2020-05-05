@@ -2,7 +2,7 @@
 A simple python experiment showing period doubling bifurcation on varying growth rate in a logistics curve.
 
 
-##Simple population size formula
+## Simple population size formula
 The formula for getting the population size in the presence of some limiting factor is simply:
 >future_population = growth_rate*current_population*(1.0-current_population/population_limit)
 
@@ -12,7 +12,7 @@ This is simply implemented in python as my *breed()* function.
 >    ans = l*x*(1.0-x/1000) #gets the population of next timestep
 >    return ans
 
-##Steady state population
+## Steady state population
 To get the steady state population, we need to let the system run for a certain period of time, say 100 time steps. You may wish to increase this value, but I find that at 100 steps, it will reach (or at least be close enough) to steady state. 
 
 >def finalPop(x, k): #Gets the steady state population
@@ -24,7 +24,7 @@ To get the steady state population, we need to let the system run for a certain 
 >    return arr[len(arr)-1]
 >
 
-##Plotting the Period Doubling Bifurcation
+## Plotting the Period Doubling Bifurcation
 The *finalpop()* function simply returns a steady state value. Hence, we will need to store this value into an array to compare the evolution of the steady state value with varying growth rate. 
 
 To do this, we use the *getplot()* function
